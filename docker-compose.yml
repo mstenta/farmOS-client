@@ -4,6 +4,9 @@ services:
     build: .
     ports:
       - '8080:8080'
+    volumes:
+      - './package-lock.json:/app/package-lock.json'
+      - './src:/app/src'
     environment:
       HOST: '0.0.0.0'
 
